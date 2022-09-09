@@ -1,0 +1,3 @@
+username: ramYtdCache 
+access key id: AKIAV532REVJISTAY26O
+access secret key: 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
