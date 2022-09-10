@@ -3,13 +3,18 @@ import mongo_db as db
 
 API_KEY="AIzaSyCcTVNeWxkQObvTyvesPO0VhAGdIdx3xFQ"
 
-def saveComments(video_id):
 
+
+def saveComments(video_id):
+    """
+    Extracting Comments and Replies with video id using google api
+    :param video_id:
+    """
     try:
         # creating youtube resource object
         youtube = build('youtube', 'v3',
                         developerKey=API_KEY)
-        #COTMO2sYJh0
+
         # retrieve youtube video results
         video_response = youtube. commentThreads().list(
                                     part="snippet,replies",
@@ -17,7 +22,7 @@ def saveComments(video_id):
                                     maxResults= 1000,   #get 1000 comments
                                     order="orderUnspecified").execute()
 
-       # print(video_response)
+
         #get first 10 items from 20 comments
         items = video_response["items"]
         comments = []
@@ -32,12 +37,6 @@ def saveComments(video_id):
             topLevelComment = item_info["topLevelComment"]
             comment_info = topLevelComment["snippet"]
 
-            #print("Comment Id: ", topLevelComment['id'])
-            #print("Comment By:", comment_info["authorDisplayName"])
-            #print("Comment Text:", comment_info["textDisplay"])
-            #print("Likes on Comment:", comment_info["likeCount"])
-            #print("Comment Date: ", comment_info['publishedAt'])
-            #print("================================\n")
 
             try:
                 commentId= topLevelComment['id']
@@ -92,9 +91,9 @@ def saveComments(video_id):
 
         db.saveCommentsData(return_json)
         print(return_json)
-        return return_json
+
     except Exception as e:
-        print("System Error ....",e.with_traceback())
+        print("System Error ....",e)
 
 
 if __name__ =="__main__":
