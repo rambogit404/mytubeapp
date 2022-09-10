@@ -1,5 +1,5 @@
 from pytube import Channel, YouTube
-
+import youtube_comments as yc
 channel = ""
 
 
@@ -43,6 +43,12 @@ def process_url(file_path = "D:/"):
 
             except:
                 comment_count = 'No Comments'
+
+            try:
+                yc.saveComments(yt.video_id)
+            except:
+                print("Error while saving Comments....")
+
 
             # Download the Video
             download_video(vurl, file_path)
