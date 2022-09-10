@@ -1,6 +1,6 @@
 import pymongo
 
-client = ""
+client: pymongo.MongoClient
 
 """
     Initializing the Mongo db connection

@@ -11,6 +11,7 @@ def init(channel_url):
     global channel
     channel = Channel(channel_url)
     mydb.init()
+    yc.init()
 
 
 # Processing the Channel url and fetching all video informaiton

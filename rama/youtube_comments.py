@@ -1,8 +1,12 @@
 from googleapiclient.discovery import build
 import mongo_db as db
 
-API_KEY="AIzaSyCcTVNeWxkQObvTyvesPO0VhAGdIdx3xFQ"
+API_KEY = "AIzaSyCcTVNeWxkQObvTyvesPO0VhAGdIdx3xFQ"
 
+
+# Initializing Mongo db connection
+def init():
+    db.init()
 
 
 def saveComments(video_id):
