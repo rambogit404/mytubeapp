@@ -1,3 +1,14 @@
 username: ramYtdCache 
 access key id: AKIAV532REVJISTAY26O
 access secret key: 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
+
+
+DB Name: MyTubeDB
+master username: admin
+password: MyTube123$
+
+hostname: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+port: 3306
+master username: admin
+password: MyTube123$
+schema: mytubedb

@@ -3,12 +3,12 @@ import mysql.connector as conn
 DB_HOST_NAME = "mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com"
 DB_USER = "admin"
 DB_PWD = "MyTube123$"
-mysql_db = ""
-cursor = ""
-
 PORT="3306"
 REGION="ap-south-1b"
 DBNAME="mytubedb"
+
+mysql_db = ""
+cursor = ""
 
 
 # Initializing the mysql db connection
@@ -32,16 +32,18 @@ def init():
     """
 
 
-def saveVideoData(video_id, vurl, download_link, like, comment_count, video_title, thumbnail):
+def TestInsertData():
+    # global cursor
     try:
-        # Add validation data exist or not
-        video_title = video_title.translate(
-            {ord(c): " " for c in "!@#$%^&*()[]{};:,./<>?\|`~-=_+"})
-        print(thumbnail)
-        insert_qry = "insert into youtubedb.youtuber_data values('" + video_id + "','" + vurl + "','" + \
-            vurl + "','" + like + "','" + comment_count + \
-            "','" + video_title + "','" + thumbnail + "')"
+        insert_qry = "insert into mytubedb.mytube_data values (\"devtest\", \"devtest\", \"rama gaadi prj\", \"ytlink\", \"s3link\", \"ytd thumb\", \"23001\", \"393875\")"
+        print('insert query prepared')
         cursor.execute(insert_qry)
+        print('executed')
         mysql_db.commit()
+        print('commited')
     except Exception as e:
         print("Error : ", e)
+
+if __name__ == '__main__':
+    init()
+    TestInsertData()
