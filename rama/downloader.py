@@ -1,13 +1,17 @@
 from pytube import Channel, YouTube
 import youtube_comments as yc
+import mysql_db as mydb
+
 channel = ""
 
 
-# initializing the Channel Object
+# initializing the Channel Object and mysql db
 # arg1 passing channel url upto videos
 def init(channel_url):
     global channel
     channel = Channel(channel_url)
+    mydb.init()
+
 
 # Processing the Channel url and fetching all video informaiton
 # arg1 passing file save path
@@ -34,7 +38,7 @@ def process_url(file_path = "D:/"):
                     'simpleText']
 
             except:
-                like = 'No Likes'
+                like = '0'
 
             try:
                 comment_count = yt.initial_data['contents'] \
@@ -42,13 +46,18 @@ def process_url(file_path = "D:/"):
                     ['contents'][0]['commentsEntryPointHeaderRenderer']['commentCount']['simpleText']
 
             except:
-                comment_count = 'No Comments'
+                comment_count = '0'
+
+            try:
+
+                mydb.saveVideoData(yt.video_id, vurl, vurl, like, comment_count, video_title, thumbnail)
+            except Exception as e:
+                print("Error while saving video Data....", e.with_traceback())
 
             try:
                 yc.saveComments(yt.video_id)
             except:
                 print("Error while saving Comments....")
-
 
             # Download the Video
             download_video(vurl, file_path)
@@ -60,10 +69,12 @@ def process_url(file_path = "D:/"):
     except:
         print("system Error!.....")
 
+
 # Upload videos to s3 cloud memory
 # arg1 Passing file save path
 def upload_videos_to_s3(file_path):
     print(file_path)
+
 
 # Download videos
 # arg1 passing video url
