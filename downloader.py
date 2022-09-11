@@ -3,7 +3,7 @@ import s3_file_transfer as s3d3v
 import youtube_comments as yc
 import mysql_db as mydb
 
-channel = ""
+channel: Channel
 max_vids = 2
 
 # initializing the Channel Object and mysql db
@@ -15,6 +15,7 @@ def init(channel_url):
     channel = Channel(channel_url)
     mydb.init()
     yc.init()
+    return channel
 
 
 # Processing the Channel url and fetching all video informaiton
@@ -22,7 +23,7 @@ def init(channel_url):
 def process_url(file_path="D:/"):
     try:
         urls = channel.video_urls[:max_vids]
-
+        channel_id = channel.channel_id
         for vurl in urls:
 
             yt = YouTube(vurl)
@@ -51,7 +52,7 @@ def process_url(file_path="D:/"):
 
             try:
 
-                mydb.saveVideoData(yt.video_id, vurl, vurl,
+                mydb.saveVideoData(channel_id,yt.video_id, vurl, vurl,
                                    like, comment_count, video_title, thumbnail)
             except Exception as e:
                 print("Error while saving video Data....", e.with_traceback())
