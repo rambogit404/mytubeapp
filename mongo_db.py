@@ -30,5 +30,25 @@ def saveCommentsData(data):
     except Exception as e:
         print("mongo_db: Mongo Database Error", e)
 
+
+def fetchCommentsbyVideoId(video_id):
+    comments=[]
+    try:
+        # Add validation data exist or not
+        database = client['youtubedb']
+        collection = database["youtube_comments"]
+        commentsData=collection.find_one({"videoId":video_id})
+        print(commentsData['commentsData'])
+        comments=commentsData['commentsData']
+        return comments
+    except Exception as e:
+        print("mongo_db: Mongo Database Error", e)
+        return comments
+
 def close():
     client.close()
+
+if __name__ == "__main__":
+    init()
+    print(fetchCommentsbyVideoId("2CRY5BYf-js11"))
+
