@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request,jsonify
-from flask_cors import CORS,cross_origin
+from flask import Flask, render_template, request
+from flask_cors import cross_origin
 import downloader as dl
 import mysql_db as mydb
 

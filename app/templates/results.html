@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" xmlns:style="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="UTF-8">
@@ -16,11 +16,13 @@
 </head>
 
 <body>
+  <div class="content">
+  <div class="container-fluid">
+      <div class="text-center"><h1 class="mb-5">Youtube Channel Details</h1></div>
 
-  <div >
-   <div>Youtube Channel Details</div>
 
-   <table class="table table-hover">
+       <table class="table table-hover">
+  <thead class="thead-dark">
       <tr>
          <th>Thumbnail</th>
          <th>Title</th>
@@ -30,19 +32,20 @@
          <th>Download Link</th>
          <th width="230">Comments</th>
       </tr>
+  </thead>
          {% for data in video_data %}
       <tr>
-          <td><img src={{data['thumbnail']}} width="250" height="150"></td>
+          <td><img src={{data['thumbnail']}} class="img-thumbnail" width="350" height="250"></td>
          <td>{{data['title']}}</td>
          <td>{{data['likes']}}</td>
          <td>{{data['comments_count']}}</td>
-         <td>{{data['youtube_link']}}</td>
-         <td>{{data['download_link']}}</td>
+         <td><a href={{data['youtube_link']}}> YouTube link</a></td>
+         <td><a href={{data['download_link']}}>My Tube Download link</a></td>
          <td>{{data['video_id']}} </td>
        {% endfor %}
    </table>
 </div>
-
+  </div>
 
 
 </body>
