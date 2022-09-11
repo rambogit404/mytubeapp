@@ -19,12 +19,15 @@ def saveComments(video_id):
         youtube = build('youtube', 'v3',
                         developerKey=API_KEY)
 
-        # retrieve youtube video results
-        video_response = youtube. commentThreads().list(
-            part="snippet,replies",
-            videoId=video_id,
-            maxResults=1000,  # get 1000 comments
-            order="orderUnspecified").execute()
+        try:
+            # retrieve youtube video results
+            video_response = youtube. commentThreads().list(
+                part="snippet,replies",
+                videoId=video_id,
+                maxResults=1000,  # get 1000 comments
+                order="orderUnspecified").execute()
+        except Exception as e:
+            print("youtube_comments: savecomments: while fetching comments getting error ")
 
         # get first 10 items from 20 comments
         items = video_response["items"]
@@ -46,8 +49,7 @@ def saveComments(video_id):
             except:
                 commentId = 'No Comment Id'
             try:
-                commenterName =
-                comment_info['authorDisplayName']
+                commenterName = comment_info['authorDisplayName']
 
             except:
                 commenterName = 'No Commenter Name'
@@ -97,7 +99,7 @@ def saveComments(video_id):
         print(return_json)
 
     except Exception as e:
-        print("System Error ....", e)
+        print("youtube_comments: saveComments: System Error ....", e)
 
 
 if __name__ == "__main__":
