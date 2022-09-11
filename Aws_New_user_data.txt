@@ -12,3 +12,5 @@ port: 3306
 master username: admin
 password: MyTube123$
 schema: mytubedb
+
+ec2 windows administrator password: d3v123$
