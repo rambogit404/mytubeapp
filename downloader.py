@@ -22,6 +22,7 @@ def init(channel_url):
 # arg1 passing file save path
 def process_url(file_path="D:/"):
     try:
+        download_link=''
         urls = channel.video_urls[:max_vids]
         channel_id = channel.channel_id
         for vurl in urls:
@@ -50,9 +51,21 @@ def process_url(file_path="D:/"):
             except:
                 comment_count = '0'
 
-            try:
 
-                mydb.saveVideoData(channel_id,yt.video_id, vurl, vurl,
+            # Download the Video
+            download_video(vurl, file_path)
+
+            file_name_path = file_path + yt.video_id + ".mp4"
+
+            # Uploading the videos to Cloud
+            upld_res = upload_videos_to_s3(file_name_path)
+
+            # Getting download link
+            if upld_res[0]:
+                download_link = upld_res[1]
+
+            try:
+                mydb.saveVideoData(channel_id, yt.video_id, vurl, download_link,
                                    like, comment_count, video_title, thumbnail)
             except Exception as e:
                 print("Error while saving video Data....", e.with_traceback())
@@ -61,14 +74,6 @@ def process_url(file_path="D:/"):
                 yc.saveComments(yt.video_id)
             except:
                 print("Error while saving Comments....")
-
-            # Download the Video
-            download_video(vurl, file_path)
-
-            file_name_path = file_path + yt.video_id + ".mp4"
-
-            # Uploading the videos to Cloud
-            upload_videos_to_s3(file_name_path)
     except:
         print("system Error!.....")
 
@@ -80,6 +85,7 @@ def upload_videos_to_s3(file_path):
     print(f'Uploading file: {file_path}')
     ret = s3d3v.upload_file(file_path, s3d3v.s3_bucket_name, True)
     print(f'ret: {ret}')
+    return ret
 
 # Download videos
 # arg1 passing video url
