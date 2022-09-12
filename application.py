@@ -20,6 +20,7 @@ def index():
         try:
             channel_url = request.form['content'].replace(" ", "")
             cp.init()
+            print("Channel Url : ",channel_url)
             channel = dl.init(channel_url)
             video_data = mydb.fetchData(channel.channel_id)
             if len(video_data) > 0:
