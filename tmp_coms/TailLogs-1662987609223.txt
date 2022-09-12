@@ -1,0 +1,238 @@
+----------------------------------------
+/tmp/sample-app.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Sep 12 12:45:18 ip-172-31-11-28 web: ImportError: cannot import name 'escape' from 'jinja2' (/var/app/venv/staging-LQM1lest/lib/python3.8/site-packages/jinja2/__init__.py)
+Sep 12 12:45:18 ip-172-31-11-28 web: [2022-09-12 12:45:18 +0000] [4092] [INFO] Worker exiting (pid: 4092)
+Sep 12 12:45:18 ip-172-31-11-28 web: [2022-09-12 12:45:18 +0000] [4086] [INFO] Shutting down: Master
+Sep 12 12:45:18 ip-172-31-11-28 web: [2022-09-12 12:45:18 +0000] [4086] [INFO] Reason: Worker failed to boot.
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5053] [INFO] Starting gunicorn 20.1.0
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5053] [INFO] Listening at: http://127.0.0.1:8000 (5053)
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5053] [INFO] Using worker: gthread
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5108] [INFO] Booting worker with pid: 5108
+Sep 12 12:58:56 ip-172-31-11-28 web: Failed to find attribute 'application' in 'application'.
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5108] [INFO] Worker exiting (pid: 5108)
+Sep 12 12:58:56 ip-172-31-11-28 web: config_parser::init config sections: ['APP_CONFIG']
+Sep 12 12:58:56 ip-172-31-11-28 web: youtube-videos-04092022
+Sep 12 12:58:56 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:56 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:56 ip-172-31-11-28 web: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+Sep 12 12:58:56 ip-172-31-11-28 web: admin
+Sep 12 12:58:56 ip-172-31-11-28 web: MyTube123$
+Sep 12 12:58:56 ip-172-31-11-28 web: 2
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5053] [INFO] Shutting down: Master
+Sep 12 12:58:56 ip-172-31-11-28 web: [2022-09-12 12:58:56 +0000] [5053] [INFO] Reason: App failed to load.
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5116] [INFO] Starting gunicorn 20.1.0
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5116] [INFO] Listening at: http://127.0.0.1:8000 (5116)
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5116] [INFO] Using worker: gthread
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5122] [INFO] Booting worker with pid: 5122
+Sep 12 12:58:57 ip-172-31-11-28 web: Failed to find attribute 'application' in 'application'.
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5122] [INFO] Worker exiting (pid: 5122)
+Sep 12 12:58:57 ip-172-31-11-28 web: config_parser::init config sections: ['APP_CONFIG']
+Sep 12 12:58:57 ip-172-31-11-28 web: youtube-videos-04092022
+Sep 12 12:58:57 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:57 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:57 ip-172-31-11-28 web: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+Sep 12 12:58:57 ip-172-31-11-28 web: admin
+Sep 12 12:58:57 ip-172-31-11-28 web: MyTube123$
+Sep 12 12:58:57 ip-172-31-11-28 web: 2
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5116] [INFO] Shutting down: Master
+Sep 12 12:58:57 ip-172-31-11-28 web: [2022-09-12 12:58:57 +0000] [5116] [INFO] Reason: App failed to load.
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5130] [INFO] Starting gunicorn 20.1.0
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5130] [INFO] Listening at: http://127.0.0.1:8000 (5130)
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5130] [INFO] Using worker: gthread
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5136] [INFO] Booting worker with pid: 5136
+Sep 12 12:58:58 ip-172-31-11-28 web: Failed to find attribute 'application' in 'application'.
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5136] [INFO] Worker exiting (pid: 5136)
+Sep 12 12:58:58 ip-172-31-11-28 web: config_parser::init config sections: ['APP_CONFIG']
+Sep 12 12:58:58 ip-172-31-11-28 web: youtube-videos-04092022
+Sep 12 12:58:58 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:58 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:58 ip-172-31-11-28 web: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+Sep 12 12:58:58 ip-172-31-11-28 web: admin
+Sep 12 12:58:58 ip-172-31-11-28 web: MyTube123$
+Sep 12 12:58:58 ip-172-31-11-28 web: 2
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5130] [INFO] Shutting down: Master
+Sep 12 12:58:58 ip-172-31-11-28 web: [2022-09-12 12:58:58 +0000] [5130] [INFO] Reason: App failed to load.
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5144] [INFO] Starting gunicorn 20.1.0
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5144] [INFO] Listening at: http://127.0.0.1:8000 (5144)
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5144] [INFO] Using worker: gthread
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5150] [INFO] Booting worker with pid: 5150
+Sep 12 12:58:59 ip-172-31-11-28 web: Failed to find attribute 'application' in 'application'.
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5150] [INFO] Worker exiting (pid: 5150)
+Sep 12 12:58:59 ip-172-31-11-28 web: config_parser::init config sections: ['APP_CONFIG']
+Sep 12 12:58:59 ip-172-31-11-28 web: youtube-videos-04092022
+Sep 12 12:58:59 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:59 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:58:59 ip-172-31-11-28 web: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+Sep 12 12:58:59 ip-172-31-11-28 web: admin
+Sep 12 12:58:59 ip-172-31-11-28 web: MyTube123$
+Sep 12 12:58:59 ip-172-31-11-28 web: 2
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5144] [INFO] Shutting down: Master
+Sep 12 12:58:59 ip-172-31-11-28 web: [2022-09-12 12:58:59 +0000] [5144] [INFO] Reason: App failed to load.
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5158] [INFO] Starting gunicorn 20.1.0
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5158] [INFO] Listening at: http://127.0.0.1:8000 (5158)
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5158] [INFO] Using worker: gthread
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5164] [INFO] Booting worker with pid: 5164
+Sep 12 12:59:00 ip-172-31-11-28 web: Failed to find attribute 'application' in 'application'.
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5164] [INFO] Worker exiting (pid: 5164)
+Sep 12 12:59:00 ip-172-31-11-28 web: config_parser::init config sections: ['APP_CONFIG']
+Sep 12 12:59:00 ip-172-31-11-28 web: youtube-videos-04092022
+Sep 12 12:59:00 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:59:00 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:59:00 ip-172-31-11-28 web: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+Sep 12 12:59:00 ip-172-31-11-28 web: admin
+Sep 12 12:59:00 ip-172-31-11-28 web: MyTube123$
+Sep 12 12:59:00 ip-172-31-11-28 web: 2
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5158] [INFO] Shutting down: Master
+Sep 12 12:59:00 ip-172-31-11-28 web: [2022-09-12 12:59:00 +0000] [5158] [INFO] Reason: App failed to load.
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5172] [INFO] Starting gunicorn 20.1.0
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5172] [INFO] Listening at: http://127.0.0.1:8000 (5172)
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5172] [INFO] Using worker: gthread
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5178] [INFO] Booting worker with pid: 5178
+Sep 12 12:59:01 ip-172-31-11-28 web: Failed to find attribute 'application' in 'application'.
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5178] [INFO] Worker exiting (pid: 5178)
+Sep 12 12:59:01 ip-172-31-11-28 web: config_parser::init config sections: ['APP_CONFIG']
+Sep 12 12:59:01 ip-172-31-11-28 web: youtube-videos-04092022
+Sep 12 12:59:01 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:59:01 ip-172-31-11-28 web: mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority
+Sep 12 12:59:01 ip-172-31-11-28 web: mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com
+Sep 12 12:59:01 ip-172-31-11-28 web: admin
+Sep 12 12:59:01 ip-172-31-11-28 web: MyTube123$
+Sep 12 12:59:01 ip-172-31-11-28 web: 2
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5172] [INFO] Shutting down: Master
+Sep 12 12:59:01 ip-172-31-11-28 web: [2022-09-12 12:59:01 +0000] [5172] [INFO] Reason: App failed to load.
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2022/09/12 12:58:55.058731 [INFO] The dir .platform/hooks/predeploy/ does not exist
+2022/09/12 12:58:55.058735 [INFO] Finished running scripts in /var/app/staging/.platform/hooks/predeploy
+2022/09/12 12:58:55.058741 [INFO] Executing instruction: stop X-Ray
+2022/09/12 12:58:55.058745 [INFO] stop X-Ray ...
+2022/09/12 12:58:55.058756 [INFO] Running command /bin/sh -c systemctl show -p PartOf xray.service
+2022/09/12 12:58:55.065669 [WARN] stopProcess Warning: process xray is not registered 
+2022/09/12 12:58:55.065685 [INFO] Running command /bin/sh -c systemctl stop xray.service
+2022/09/12 12:58:55.074089 [INFO] Executing instruction: stop proxy
+2022/09/12 12:58:55.074105 [INFO] Running command /bin/sh -c systemctl show -p PartOf httpd.service
+2022/09/12 12:58:55.079552 [WARN] deregisterProcess Warning: process httpd is not registered, skipping...
+
+2022/09/12 12:58:55.079567 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2022/09/12 12:58:55.083834 [INFO] Running command /bin/sh -c systemctl is-active nginx.service
+2022/09/12 12:58:55.087353 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2022/09/12 12:58:55.091510 [INFO] Running command /bin/sh -c systemctl stop nginx.service
+2022/09/12 12:58:55.115015 [INFO] Running command /bin/sh -c systemctl disable nginx.service
+2022/09/12 12:58:55.207293 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/09/12 12:58:55.299506 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/09/12 12:58:55.304165 [INFO] Executing instruction: FlipApplication
+2022/09/12 12:58:55.304175 [INFO] Fetching environment variables...
+2022/09/12 12:58:55.304318 [INFO] Purge old process...
+2022/09/12 12:58:55.304333 [INFO] Running command /bin/sh -c systemctl stop eb-app.target
+2022/09/12 12:58:55.308806 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2022/09/12 12:58:55.313702 [INFO] web.service
+
+2022/09/12 12:58:55.313722 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2022/09/12 12:58:55.318286 [INFO] Running command /bin/sh -c systemctl is-active web.service
+2022/09/12 12:58:55.321920 [INFO] Running command /bin/sh -c systemctl disable web.service
+2022/09/12 12:58:55.415502 [INFO] Removed symlink /etc/systemd/system/multi-user.target.wants/web.service.
+
+2022/09/12 12:58:55.415593 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/09/12 12:58:55.510124 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/09/12 12:58:55.514537 [INFO] Removing /var/app/current/ if it exists
+2022/09/12 12:58:55.515133 [INFO] Renaming /var/app/staging/ to /var/app/current/
+2022/09/12 12:58:55.515154 [INFO] Register application processes...
+2022/09/12 12:58:55.515159 [INFO] Registering the proc: web
+
+2022/09/12 12:58:55.515170 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2022/09/12 12:58:55.521453 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/09/12 12:58:55.622134 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/09/12 12:58:55.626510 [INFO] Running command /bin/sh -c systemctl is-enabled eb-app.target
+2022/09/12 12:58:55.630340 [INFO] Running command /bin/sh -c systemctl enable eb-app.target
+2022/09/12 12:58:55.722009 [INFO] Running command /bin/sh -c systemctl start eb-app.target
+2022/09/12 12:58:55.727594 [INFO] Running command /bin/sh -c systemctl enable web.service
+2022/09/12 12:58:55.819012 [INFO] Created symlink from /etc/systemd/system/multi-user.target.wants/web.service to /etc/systemd/system/web.service.
+
+2022/09/12 12:58:55.819046 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2022/09/12 12:58:55.824367 [INFO] Running command /bin/sh -c systemctl is-active web.service
+2022/09/12 12:58:55.827878 [INFO] Running command /bin/sh -c systemctl start web.service
+2022/09/12 12:58:55.846778 [INFO] Executing instruction: start X-Ray
+2022/09/12 12:58:55.846793 [INFO] X-Ray is not enabled.
+2022/09/12 12:58:55.846800 [INFO] Executing instruction: start proxy with new configuration
+2022/09/12 12:58:55.846820 [INFO] Running command /bin/sh -c /usr/sbin/nginx -t -c /var/proxy/staging/nginx/nginx.conf
+2022/09/12 12:58:55.864860 [INFO] nginx: the configuration file /var/proxy/staging/nginx/nginx.conf syntax is ok
+nginx: configuration file /var/proxy/staging/nginx/nginx.conf test is successful
+
+2022/09/12 12:58:55.865090 [INFO] Running command /bin/sh -c cp -rp /var/proxy/staging/nginx/* /etc/nginx
+2022/09/12 12:58:55.873152 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2022/09/12 12:58:55.887432 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/09/12 12:58:56.012686 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/09/12 12:58:56.021213 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2022/09/12 12:58:56.033715 [INFO] Running command /bin/sh -c systemctl is-active nginx.service
+2022/09/12 12:58:56.042299 [INFO] Running command /bin/sh -c systemctl start nginx.service
+2022/09/12 12:58:56.114343 [INFO] Executing instruction: configureSqsd
+2022/09/12 12:58:56.114358 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2022/09/12 12:58:56.114366 [INFO] Executing instruction: startSqsd
+2022/09/12 12:58:56.114370 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2022/09/12 12:58:56.114374 [INFO] Executing instruction: Track pids in healthd
+2022/09/12 12:58:56.114378 [INFO] This is an enhanced health env...
+2022/09/12 12:58:56.114397 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2022/09/12 12:58:56.128798 [INFO] healthd.service nginx.service cfn-hup.service
+
+2022/09/12 12:58:56.128818 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2022/09/12 12:58:56.143711 [INFO] web.service
+
+2022/09/12 12:58:56.143879 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2022/09/12 12:58:56.143893 [INFO] Executing platform hooks in .platform/hooks/postdeploy/
+2022/09/12 12:58:56.143910 [INFO] The dir .platform/hooks/postdeploy/ does not exist
+2022/09/12 12:58:56.143914 [INFO] Finished running scripts in /var/app/current/.platform/hooks/postdeploy
+2022/09/12 12:58:56.143921 [INFO] Executing cleanup logic
+2022/09/12 12:58:56.144022 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1662987533133,"severity":"INFO"},{"msg":"Instance deployment completed successfully.","timestamp":1662987536143,"severity":"INFO"}]}]}
+
+2022/09/12 12:58:56.144946 [INFO] Platform Engine finished execution on command: app-deploy
+
+2022/09/12 13:00:08.536713 [INFO] Starting...
+2022/09/12 13:00:08.536764 [INFO] Starting EBPlatform-PlatformEngine
+2022/09/12 13:00:08.536791 [INFO] reading event message file
+2022/09/12 13:00:08.536946 [INFO] Engine received EB command cfn-hup-exec
+
+2022/09/12 13:00:08.619962 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-south-1:407741998418:stack/awseb-e-h9sdki6gqv-stack/484fe740-3297-11ed-a1d5-06c060b35012 -r AWSEBAutoScalingGroup --region ap-south-1
+2022/09/12 13:00:08.928534 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-south-1:407741998418:stack/awseb-e-h9sdki6gqv-stack/484fe740-3297-11ed-a1d5-06c060b35012 -r AWSEBBeanstalkMetadata --region ap-south-1
+2022/09/12 13:00:09.222758 [INFO] checking whether command tail-log is applicable to this instance...
+2022/09/12 13:00:09.222777 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/09/12 13:00:09.222781 [INFO] Engine command: (tail-log)
+
+2022/09/12 13:00:09.222832 [INFO] Executing instruction: GetTailLogs
+2022/09/12 13:00:09.222837 [INFO] Tail Logs...
+2022/09/12 13:00:09.223086 [INFO] Running command /bin/sh -c tail -n 100 /tmp/sample-app.log
+2022/09/12 13:00:09.224837 [INFO] Running command /bin/sh -c tail -n 100 /var/log/web.stdout.log
+2022/09/12 13:00:09.226496 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+49.37.152.43 - - [12/Sep/2022:12:42:52 +0000] "GET / HTTP/1.1" 200 3541 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0" "-"
+49.37.152.43 - - [12/Sep/2022:12:42:53 +0000] "GET /favicon.ico HTTP/1.1" 200 3541 "http://mytube-env.eba-dnutv4df.ap-south-1.elasticbeanstalk.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0" "-"
+49.37.152.43 - - [12/Sep/2022:12:46:24 +0000] "GET / HTTP/1.1" 502 157 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0" "-"
+49.37.152.43 - - [12/Sep/2022:12:46:24 +0000] "GET /favicon.ico HTTP/1.1" 502 157 "http://mytube-env.eba-dnutv4df.ap-south-1.elasticbeanstalk.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0" "-"
+200.53.21.188 - - [12/Sep/2022:12:59:34 +0000] "GET / HTTP/1.1" 502 559 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2022/09/12 12:46:24 [error] 4009#4009: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 49.37.152.43, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "mytube-env.eba-dnutv4df.ap-south-1.elasticbeanstalk.com"
+2022/09/12 12:46:24 [error] 4009#4009: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 49.37.152.43, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:8000/favicon.ico", host: "mytube-env.eba-dnutv4df.ap-south-1.elasticbeanstalk.com", referrer: "http://mytube-env.eba-dnutv4df.ap-south-1.elasticbeanstalk.com/"
+2022/09/12 12:59:34 [error] 5092#5092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 200.53.21.188, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "43.204.146.174:80"
+
+
