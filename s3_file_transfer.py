@@ -43,8 +43,8 @@ def upload_file(video_file_name, bucket_name=s3_bucket_name, public_url=False):
             # print(link)
     except ClientError as e:
         print(e)
-        return {False,None}
-    return {True, link}
+        return (False,None)
+    return (True, link)
 
 def upload_test():
     for file in glob.glob("C:\\Users\\deven\\Desktop\\upld\\*.*"):
