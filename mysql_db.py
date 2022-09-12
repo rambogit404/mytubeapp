@@ -48,7 +48,7 @@ def saveVideoData(channel_id,video_id, vurl, download_link, like, comment_count,
         insert_qry = """
                     INSERT INTO mytubedb.mytube_data (channel_id,video_id,youtube_video_link,s3_download_link,likes_count,comments_count,tile_of_video,youtube_thumbnail_url) VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
                     """
-        data = (channel_id, video_id, vurl, vurl, like, comment_count, video_title, thumbnail)
+        data = (channel_id, video_id, vurl, download_link, like, comment_count, video_title, thumbnail)
 
         cursor.execute(insert_qry, data)
 
