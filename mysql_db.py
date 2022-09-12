@@ -1,10 +1,11 @@
 import mysql.connector as conn
 from mysql.connector.cursor import MySQLCursor
 import mongo_db as mdb
+import config_parser as cp
 
-DB_HOST_NAME = "mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com"
-DB_USER = "admin"
-DB_PWD = "MyTube123$"
+DB_HOST_NAME = cp.getConfig("MYSQL_HOST_NAME") #"mytubedb.cnaqs2xve1td.ap-south-1.rds.amazonaws.com"
+DB_USER = cp.getConfig("MYSQL_USER") #"admin"
+DB_PWD =  cp.getConfig("MYSQL_PWD") #"MyTube123$"
 
 
 mysql_db = ""
