@@ -4,16 +4,16 @@ import downloader as dl
 import mysql_db as mydb
 import config_parser as cp
 
-app: Flask = Flask(__name__)
+application: Flask = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])  # route to display the home page
+@application.route('/', methods=['GET'])  # route to display the home page
 @cross_origin()
 def homePage():
     return render_template("index.html")
 
 
-@app.route('/ytvdownload', methods=['POST', 'GET'])  # route to show the review comments in a web UI
+@application.route('/ytvdownload', methods=['POST', 'GET'])  # route to show the review comments in a web UI
 @cross_origin()
 def index():
     if request.method == 'POST':
@@ -41,7 +41,7 @@ def index():
 
 
 if __name__ == "__main__":
-    # app.run(host='127.0.0.1', port=8001, debug=True
-    app.run()
+    # application.run(host='127.0.0.1', port=8001, debug=True
+    application.run()
 
 
