@@ -2,9 +2,11 @@ from pytube import Channel, YouTube
 import s3_file_transfer as s3d3v
 import youtube_comments as yc
 import mysql_db as mydb
+import config_parser as cp
+import mongo_db as mdb
 
 channel: Channel
-max_vids = 2
+max_vids = cp.getConfig("MAX_VID")
 
 # initializing the Channel Object and mysql db
 # arg1 passing channel url upto videos
@@ -14,7 +16,7 @@ def init(channel_url):
     global channel
     channel = Channel(channel_url)
     mydb.init()
-    yc.init()
+    mdb.init()
     return channel
 
 
@@ -60,7 +62,7 @@ def process_url(file_path="D:/"):
             # Uploading the videos to Cloud
             upld_res = upload_videos_to_s3(file_name_path)
 
-            # Getting download link
+             # Getting download link
             if upld_res[0]:
                 download_link = upld_res[1]
 
@@ -100,6 +102,9 @@ def download_video(url, file_path):
     except:
         print("Error while download video:", url)
 
+def close():
+    mydb.close()
+    mdb.close()
 
 if __name__ == "__main__":
     print("Start : ")

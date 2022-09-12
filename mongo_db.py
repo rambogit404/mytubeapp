@@ -1,6 +1,10 @@
 import pymongo
+import config_parser as cp
 
 client: pymongo.MongoClient
+
+MONGO_DB_URL=cp.getConfig("MONGO_DB_URL") #"mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority"
+
 
 """
     Initializing the Mongo db connection
@@ -10,8 +14,7 @@ client: pymongo.MongoClient
 def init():
     try:
         global client
-        client = pymongo.MongoClient(
-            "mongodb+srv://yadmin:Test123@cluster0.ygatu.mongodb.net/?retryWrites=true&w=majority")
+        client = pymongo.MongoClient(MONGO_DB_URL)
     except Exception as e:
         print("mongo_db: init: Connection error .... ")
 

@@ -6,8 +6,9 @@ import boto3
 import glob
 import os
 import random
+import config_parser as cpp
 
-s3_bucket_name = 'youtube-videos-04092022'
+s3_bucket_name = cpp.getConfig('S3_BUCKET_NAME') #'youtube-videos-04092022'
 s3_client = None
 
 def init_aws_s3_client():
