@@ -30,7 +30,8 @@
          <th>No Of Comments</th>
           <th>Youtube Link</th>
          <th>Download Link</th>
-         <th width="230">Comments</th>
+         <th >Comments</th>
+
       </tr>
   </thead>
          {% for data in video_data %}
@@ -41,7 +42,7 @@
          <td>{{data['comments_count']}}</td>
          <td><a href={{data['youtube_link']}}> YouTube link</a></td>
          <td><a href={{data['download_link']}}>My Tube Download link</a></td>
-         <td>{{data['video_id']}} </td>
+          <td> <textarea readonly  class="form-control" rows="10" cols="30" >{{data['commentsData']}}</textarea> </td><td></td></tr>
        {% endfor %}
    </table>
 </div>

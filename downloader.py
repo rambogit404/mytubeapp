@@ -6,7 +6,7 @@ import config_parser as cp
 import mongo_db as mdb
 
 channel: Channel
-max_vids = cp.getConfig("MAX_VID")
+max_vids = int(cp.getConfig("MAX_VID"))
 
 # initializing the Channel Object and mysql db
 # arg1 passing channel url upto videos
