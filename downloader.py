@@ -22,7 +22,7 @@ def init(channel_url):
 
 # Processing the Channel url and fetching all video informaiton
 # arg1 passing file save path
-def process_url(file_path="D:/"):
+def process_url(file_path="/tmp"):
     try:
         download_link=''
         urls = channel.video_urls[:max_vids]
