@@ -47,9 +47,6 @@ def fetchCommentsbyVideoId(video_id):
         nl = '\n'
         for comment in comments:
             text = text+f"<Name>: {comment['commentorName']}{nl}"+f"<Comments>: {comment['commentText']}{nl}"
-
-
-        print(text)
         return text
     except Exception as e:
         print("mongo_db: Mongo Database Error", e)

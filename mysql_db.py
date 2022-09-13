@@ -24,7 +24,7 @@ def init():
         cursor = mysql_db.cursor()
 
     except Exception as e:
-        print("mysql_db: init: Connection Error .. ")
+        print("mysql_db: init: Connection Error .. ",e)
 
 
 """
@@ -54,7 +54,7 @@ def saveVideoData(channel_id,video_id, vurl, download_link, like, comment_count,
 
         mysql_db.commit()
     except Exception as e:
-        print("Error : ", e)
+        print("saveVideoData :Error while saving the record: ", e)
 
 
 def close():
@@ -72,8 +72,8 @@ def fetchData(channel_id):
             recDic={"video_id":rec[0],"thumbnail":rec[1], "youtube_link":rec[2],"download_link":rec[3], "title":rec[4], "likes":rec[5], "comments_count":rec[6],"commentsData":mdb.fetchCommentsbyVideoId(rec[0])}
             videoData.append(recDic)
     except Exception as e:
-        print("Error while fetching records",e)
-    print("videoData : ", videoData)
+        print("fetchData :Error while fetching records",e)
+
     return videoData
 
 
