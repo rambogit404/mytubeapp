@@ -5,7 +5,7 @@ import mysql_db as mydb
 import config_parser as cp
 
 application: Flask = Flask(__name__)
-
+file_path = cp.getConfig("FILE_PATH")
 
 @application.route('/', methods=['GET'])  # route to display the home page
 @cross_origin()
@@ -19,17 +19,19 @@ def index():
     if request.method == 'POST':
         try:
             channel_url = request.form['content'].replace(" ", "")
+            cp.init()
+            print("Channel Url : ",channel_url)
             channel = dl.init(channel_url)
             video_data = mydb.fetchData(channel.channel_id)
             if len(video_data) > 0:
                 return render_template('results.html', video_data=video_data[0:(len(video_data))])
             else:
-                dl.process_url()
+                dl.process_url(file_path)
                 video_data = mydb.fetchData(channel.channel_id)
                 return render_template('results.html', video_data=video_data[0:(len(video_data))])
 
         except Exception as e:
-            print('The Exception message is: ', e)
+            print('application: The Exception message is: ', e)
             return 'something is wrong'
         finally:
             dl.close()
@@ -43,5 +45,6 @@ def index():
 if __name__ == "__main__":
     # application.run(host='127.0.0.1', port=8001, debug=True
     application.run()
+
 
 

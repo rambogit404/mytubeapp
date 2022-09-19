@@ -30,7 +30,7 @@ def saveComments(video_id):
             items = video_response["items"]
 
             replies = []
-            print("------------------------------------------------------------------------------------------------------")
+            # print("------------------------------------------------------------------------------------------------------")
             for item in items:
 
                 replies = []
@@ -81,7 +81,7 @@ def saveComments(video_id):
                         reply_dict = {
                             "commentId": rcommentId, "commentorName": rcommentName, "commentText": rcommentText}
                         replies.append(reply_dict)
-                        print(replies)
+                        # print(replies)
                 except:
                     reply = "No Reply"
 
@@ -95,7 +95,7 @@ def saveComments(video_id):
         return_json = {"videoId": video_id, "commentsData": comments}
 
         db.saveCommentsData(return_json)
-        print(return_json)
+        # print(return_json)
 
     except Exception as e:
         print("youtube_comments: saveComments: System Error ....", e)

@@ -13,6 +13,7 @@ s3_client = None
 
 def init_aws_s3_client():
     global s3_client
+    print(f's3 bucket name from config: {s3_bucket_name}')
     try:
         s3_client = boto3.client('s3')
     except:
@@ -32,18 +33,19 @@ def get_aws_s3_client():
 # returns tuple of {upload status, public_url}
 def upload_file(video_file_name, bucket_name=s3_bucket_name, public_url=False):
     object_name = os.path.basename(video_file_name)
+    print(f'bucket_name = {bucket_name}\npublic_url = {public_url}')
     print(f'Object name: {object_name}')
     link = None
     try:
         print('uploading...')
         response = get_aws_s3_client().upload_file(
             video_file_name, bucket_name, object_name)
-
+        print(f'response: {response}')
         if public_url:
             link = get_public_url(object_name)
-            # print(link)
+            print(link)
     except ClientError as e:
-        print(e)
+        print(f'ClientError: {e}')
         return (False,None)
     return (True, link)
 

@@ -4,6 +4,7 @@ import youtube_comments as yc
 import mysql_db as mydb
 import config_parser as cp
 import mongo_db as mdb
+import os
 
 channel: Channel
 max_vids = int(cp.getConfig("MAX_VID"))
@@ -22,7 +23,7 @@ def init(channel_url):
 
 # Processing the Channel url and fetching all video informaiton
 # arg1 passing file save path
-def process_url(file_path="D:/"):
+def process_url(file_path="/tmp"):
     try:
         download_link=''
         urls = channel.video_urls[:max_vids]
@@ -57,14 +58,19 @@ def process_url(file_path="D:/"):
             # Download the Video
             download_video(vurl, file_path)
 
-            file_name_path = file_path + yt.video_id + ".mp4"
+            file_name_path = os.path.join(file_path, yt.video_id+".mp4")
 
             # Uploading the videos to Cloud
+            print(f'file abs path to be uploaded: {file_name_path}')
             upld_res = upload_videos_to_s3(file_name_path)
 
              # Getting download link
+            download_link = 'failed to upload to s3'
             if upld_res[0]:
                 download_link = upld_res[1]
+                print(f'download link from s3: \n\n{download_link}\n\n')
+            else:
+                print(f'upload_videos_to_s3 method failed to upload')
 
             try:
                 mydb.saveVideoData(channel_id, yt.video_id, vurl, download_link,
